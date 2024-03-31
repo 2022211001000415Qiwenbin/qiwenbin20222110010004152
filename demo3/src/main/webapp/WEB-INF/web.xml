@@ -3,29 +3,103 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <!--add code about new servlet-->
     <servlet>
-        <servlet-name>a</servlet-name>
-        <servlet-class>com.Qiwenbin.week2.homework.HelloWorldServlet</servlet-class>
+        <servlet-name>anyName</servlet-name>
+        <servlet-class>com.example.demo3.HelloServlet</servlet-class>
     </servlet>
-    <servlet-mapping>
-        <servlet-name>a</servlet-name>
-        <url-pattern>/hello</url-pattern>
-    </servlet-mapping>
     <servlet>
         <servlet-name>LifeCycleServlet</servlet-name>
         <servlet-class>com.Qiwenbin.week3.demo.LifeCycleServlet</servlet-class>
     </servlet>
+<!--    <servlet>-->
+<!--        <servlet-name>RegisterServlet</servlet-name>-->
+<!--        <servlet-class>com.Qiwenbin.week3.demo.RegisterServlet</servlet-class>-->
+<!--        &lt;!&ndash;        <init-param>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <param-name>driver</param-name>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>&ndash;&gt;-->
+<!--        &lt;!&ndash;        </init-param>&ndash;&gt;-->
+<!--        &lt;!&ndash;        <init-param>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <param-name>url</param-name>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <param-value>jdbc:sqlserver://localhost;databaseName=userdb ;encrypt=false</param-value>&ndash;&gt;-->
+<!--        &lt;!&ndash;        </init-param>&ndash;&gt;-->
+<!--        &lt;!&ndash;        <init-param>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <param-name>username</param-name>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <param-value>sa</param-value>&ndash;&gt;-->
+<!--        &lt;!&ndash;        </init-param>&ndash;&gt;-->
+<!--        &lt;!&ndash;        <init-param>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <param-name>password</param-name>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <param-value>admin123456789</param-value>&ndash;&gt;-->
+<!--        &lt;!&ndash;        </init-param>&ndash;&gt;-->
+<!--        &lt;!&ndash;        <load-on-startup>1</load-on-startup>&ndash;&gt;-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>RegisterServlet</servlet-name>-->
+<!--        <url-pattern>/register</url-pattern>-->
+<!--    </servlet-mapping>-->
+<!--    <servlet>-->
+<!--        <servlet-name>ConfigDemoServlet</servlet-name>-->
+<!--        <servlet-class><com.></servlet-class>-->
+<!--        <init-param>-->
+<!--            <param-name>yourName</param-name>-->
+<!--            <param-value>Qiwenbin</param-value>-->
+<!--        </init-param>-->
+<!--        <init-param>-->
+<!--            <param-name>studentId</param-name>-->
+<!--            <param-value>2022211001000415</param-value>-->
+<!--        </init-param>-->
+<!--    </servlet>-->
 
+    <context-param>
+        <param-name>driver</param-name>
+        <param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:sqlserver://localhost:1433;DatabaseName=userdb;encrypt=true;trustServerCertificate=true;</param-value>
+    </context-param>
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>sa</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>admin123456789</param-value>
+    </context-param>
+
+
+
+<!--    <context-param>-->
+<!--        <param-name>dbUsername</param-name>-->
+<!--        <param-value>yourusername</param-value>-->
+<!--    </context-param>-->
+<!--    <context-param>-->
+<!--        <param-name>dbPassword</param-name>-->
+<!--        <param-value>yourpassword</param-value>-->
+<!--    </context-param>-->
+<servlet>
+    <servlet-name>ConfigServlet</servlet-name>
+    <servlet-class>com.week4.demo.ConfigServlet</servlet-class>
+</servlet>
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>ConfigServlet</servlet-name>-->
+<!--        <url-pattern>/config</url-pattern>-->
+<!--    </servlet-mapping>-->
+    <servlet-mapping>
+        <servlet-name>anyName</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>LifeCycleServlet</servlet-name>
-        <url-pattern>/Life</url-pattern>
+        <url-pattern>/life</url-pattern>
     </servlet-mapping>
-    <servlet>
-        <servlet-name>RegisterServlet</servlet-name>
-        <servlet-class>com.Qiwenbin.week3.demo.RegisterServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>RegisterServlet</servlet-name>
-        <url-pattern>/register</url-pattern>
-    </servlet-mapping>
+    <!--    <servlet-mapping>-->
+    <!--        <servlet-name>RegisterServlet</servlet-name>-->
+    <!--        <url-pattern>/register</url-pattern>-->
+    <!--    </servlet-mapping>-->
+<!--        <servlet-mapping>-->
+<!--            <servlet-name>JDBCDemoServlet</servlet-name>-->
+<!--            <url-pattern>/jdbc</url-pattern>-->
+<!--        </servlet-mapping>-->
+
 </web-app>
